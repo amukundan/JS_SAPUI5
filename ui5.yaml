@@ -1,0 +1,30 @@
+specVersion: '1.0'
+metadata:
+  name: ZG61_ICON_TAB_BAR_WEEK1_ASSG
+type: application
+resources:
+  configuration:
+    propertiesFileSourceEncoding: UTF-8
+builder:
+  customTasks:
+    - name: webide-extension-task-updateManifestJson
+      beforeTask: generateManifestBundle
+      configuration:
+        appFolder: webapp
+        destDir: dist
+    - name: webide-extension-task-updateNeoApp
+      afterTask: generateVersionInfo
+      configuration:
+        destDir: dist
+        appFolder: webapp
+        nameSpace: Week1_Assignment
+    - name: webide-extension-task-lint
+      afterTask: webide-extension-task-updateNeoApp
+      configuration:
+        destDir: dist
+        appFolder: webapp
+        nameSpace: Week1_Assignment 
+    - name: webide-extension-task-resources
+      afterTask: webide-extension-task-lint
+      configuration:
+        nameSpace: Week1_Assignment

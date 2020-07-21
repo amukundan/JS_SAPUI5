@@ -1,0 +1,10 @@
+<mvc:View controllerName="Week1_Assignment.ZG61_ICON_TAB_BAR_WEEK1_ASSG.controller.Icon_tab_bar" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content></content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
