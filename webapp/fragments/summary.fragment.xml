@@ -1,0 +1,57 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Panel expandable="true" expanded="false" width="auto" class="sapUiResponsiveMargin">
+		<headerToolbar>
+			<OverflowToolbar height="3rem" style="Clear">
+				<Title text="Personal Information"/>
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://settings"/>
+				<Button icon="sap-icon://drop-down-list"/>
+			</OverflowToolbar>
+		</headerToolbar>
+		<f:SimpleForm editable="true">
+			<f:content>
+				<core:Title text="Personal Details"/>
+				<Label design="Bold" text="First Name"></Label>
+				<Input id="inpfrgsummryFirst" placeholder="Please provide your first name" width="40%" editable="false"></Input>
+				<Label design="Bold" text="Last Name"></Label>
+				<Input id="inpfrgsummryLast" placeholder="Please provide your last name" width="40%" editable="false"></Input>
+				<!--Date picker used-->
+				<Label design="Bold" text="Date of Birth"></Label>
+				<DatePicker id="iddpfrgsummaryDoB" displayFormat="dd.MMM.yyyy" valueFormat="dd.MMM.yyyy" width="40%" editable="false"></DatePicker>
+				<!--<RadioButtonGroup id="rbfrgGendergrp" columns="2" selectedIndex="-1">
+				<buttons>
+					<RadioButton groupName="Gender" text="Male"/>
+					<RadioButton groupName="Gender" text="Female"/>
+				</buttons>
+			</RadioButtonGroup>-->
+				<core:Title text="Address Information"/>
+				<Label design="Bold" text="Address Line1"></Label>
+				<Input id="inpfrgsummryline1" placeholder="Please provide your HouseNo.,Apartment complex" width="40%" editable="false"></Input>
+				<Label design="Bold" text="Address Line2"></Label>
+				<Input id="inpfrgsummryline2" placeholder="Please provide your Locality" width="40%" editable="false"></Input>
+			</f:content>
+		</f:SimpleForm>
+	</Panel>
+	<!--for second panel-->
+	<Panel expandable="true" expanded="false" width="auto" class="sapUiResponsiveMargin">
+		<headerToolbar>
+			<OverflowToolbar height="3rem" style="Clear">
+				<Title text="Educational Information"/>
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://settings"/>
+				<Button icon="sap-icon://drop-down-list"/>
+			</OverflowToolbar>
+		</headerToolbar>
+		<f:SimpleForm editable="true">
+			<f:content>
+				<core:Title text="Educational Information"/>
+				<Input id="inpfrgsummryHD" placeholder="Please provide your Highest Degree" width="40%" editable="false"></Input>
+				<Label design="Bold" text="University"></Label>
+				<Input id="inpfrgsummryUniv" placeholder="Please provide the University" width="40%" editable="false"></Input>
+				<!--Date picker used-->
+				<Label design="Bold" text="Month and Year of Passing of clearing"></Label>
+				<DatePicker id="iddpfrgsummaryMop" displayFormat="MMM.yyyy" valueFormat="dd.MMM.yyyy" width="40%" editable="false"></DatePicker>
+			</f:content>
+		</f:SimpleForm>
+	</Panel>
+</core:FragmentDefinition>

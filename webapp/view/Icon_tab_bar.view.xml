@@ -1,9 +1,30 @@
 <mvc:View controllerName="Week1_Assignment.ZG61_ICON_TAB_BAR_WEEK1_ASSG.controller.Icon_tab_bar" xmlns:mvc="sap.ui.core.mvc"
-	xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" xmlns="sap.m">
+	xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
 	<App id="idAppControl">
 		<pages>
 			<Page title="{i18n>title}">
-				<content></content>
+				<content>
+					<!--The below is for Icon Tab Bar control-->
+					<IconTabBar id="idIconTabBar" select="handleIconTabBarSelect" applyContentPadding="false">
+						<items>
+							<IconTabFilter id="iditfpersonal" text="Personal Information" iconColor="positive" icon="sap-icon://personnel-view" count="4">
+								<content>
+									<core:Fragment fragmentName="Week1_Assignment.ZG61_ICON_TAB_BAR_WEEK1_ASSG.fragments.personalinformation" type="XML"></core:Fragment>
+								</content>
+							</IconTabFilter>
+							<IconTabSeparator icon="sap-icon://process"/>
+							<IconTabFilter id="iditfeducational" icon="sap-icon://notes" count="12" text="Education Information">
+								<!--<Text text="Education Information go here ..."/> -->
+								<core:Fragment fragmentName="Week1_Assignment.ZG61_ICON_TAB_BAR_WEEK1_ASSG.fragments.eduinfo" type="XML"/>
+							</IconTabFilter>
+							<IconTabSeparator icon="sap-icon://process"/>
+							<IconTabFilter id="iditfsummary" icon="sap-icon://group" text="Summary">
+								<!--<Text text="Summary goes here ..."/> -->
+								<core:Fragment fragmentName="Week1_Assignment.ZG61_ICON_TAB_BAR_WEEK1_ASSG.fragments.summary" type="XML"/>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
 			</Page>
 		</pages>
 	</App>

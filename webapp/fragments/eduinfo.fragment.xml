@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns="sap.m">
+	<f:SimpleForm editable="true">
+		<f:content>
+			<core:Title text="Educational Information"/>
+			<Label design="Bold" text="Highest Degree"></Label>
+			<Input id="inpfrgHD" placeholder="Please provide your Highest Degree" width="40%"></Input>
+			<Label design="Bold" text="University"></Label>
+			<Input id="inpfrgUniv" placeholder="Please provide the University" width="40%"></Input>
+			<!--Date picker used-->
+			<Label design="Bold" text="Month and Year of Passing of clearing"></Label>
+			<DatePicker id="iddpfrgMop" displayFormat="MMM.yyyy" valueFormat="dd.MMM.yyyy" width="40%"></DatePicker>
+		</f:content>
+	</f:SimpleForm>
+</core:FragmentDefinition>
